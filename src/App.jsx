@@ -1,11 +1,20 @@
 import * as React from 'react'
 
-const title = 'React';
+const welcome = {
+  greeting: 'Hey',
+  title: 'React',
+}
+
+function getTitle(title){
+  return title;
+}
 
 function App() {
   return (
       <div>
-        <hi>Hello {title}</hi>
+        <hi>{getTitle(welcome.title)}</hi>
+        <label htmlFor="search"> Search: </label>
+        <input id="search" type="text" />
     </div>
   );
 }
